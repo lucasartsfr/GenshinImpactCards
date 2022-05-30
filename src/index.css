@@ -1,0 +1,1048 @@
+@font-face {
+  font-family: 'Genshin';
+  src: local('Genshin'), url(/public/font/genshinv2.woff) format('woff');
+}
+
+*{
+  font-family: "Genshin";
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  box-sizing: border-box;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html, body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+:root{
+  --Header : 300px;
+  --HalfHeader : calc(var(--Header) / 2);
+  --Blue : #4a5265;
+  --White : #c6c9b9;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+#root{
+  height: 100%;
+  /* background-image: url('/public/image/bg.png'); */
+  background-size: 141%;
+    background-position: -275px -9px;
+}
+
+body{
+  background-image: url('/public/image/background/img/bgwish.jpg');
+  /* box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 50%); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.CanvasImage{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: grab;
+  -webkit-mask-image: linear-gradient(90deg, rgba(80,89,108,0) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%);
+  mask-image: linear-gradient(90deg, rgba(80,89,108,0) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%);
+  /* -webkit-mask-image: radial-gradient(circle, white 50%, transparent 82%);
+  mask-image: radial-gradient(circle, white 50%, transparent 82%); */
+  /* -webkit-mask-image: linear-gradient(to left, white 75%, transparent 100%); */
+  /* -webkit-mask-image: linear-gradient(to bottom, white 75%, transparent 100%); */
+}
+
+
+.App{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  overflow-y: scroll;
+  width: 100%;
+  transition: .4s;
+}
+
+.Menutrue .Banner{
+  transform: translate(calc(var(--HalfHeader) + 25px), 0px);
+}
+
+/* BANNER  */
+
+.Banner{
+  /* background-color: rgba(0,0,0,.5); */
+  opacity: 1;
+  width: 1300px;
+  min-width: 1300px;
+  height: 690px;
+  min-height: 690px;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  transition: .4s;
+}
+
+/* .BannerContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - var(--Header));
+  height: 100%;
+} */
+
+/* CHARACTER */
+
+.Character{
+  /* background-color: blue; */
+  flex-basis: 42%;
+  height: 100%;
+  padding: 10px;
+  /* background-image: url('/public/image/character/Tartaglia/Tartaglia.webp'); */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+
+
+      .Nom {
+        margin: 0;
+        color: white;
+        font-size: 18pt;
+      }
+
+      .Lvl{
+        color: #847b8d;
+      }
+
+      .Lvl b {
+        color: white;
+      }
+
+      .Niveau {
+        color: white;
+        opacity: .5;
+        font-size: 12pt;
+        font-weight: 100;
+        margin: 0;
+      }
+
+      .Constellation {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
+      }
+
+      .Constellation img{
+          max-width: 32px;
+          margin-bottom: 5px;
+          cursor: pointer;
+      }
+
+      .Constellation .NotHas{
+        opacity: .3;
+      }
+
+      .NotHas:hover{
+        opacity: 1!important;
+      }
+
+.ArteWeapon{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 35%;
+  height: 100%;
+  padding: 10px 0px 10px 10px;
+  position: relative;
+}
+
+/* WEAPON  */
+
+.Weapon{
+  /* background-color: rgba(0,0,0,0.5); */
+  border-radius: 8px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  max-height: 160px;
+  position: relative;
+}
+
+    .WeaponInfos{
+      padding: 16px 5px;
+    }
+    .WeaponImage{
+      max-width: 100%;
+      -webkit-mask-image: linear-gradient(to top, rgba(80,89,108,0) 0%, rgba(255,255,255,1) 30%);
+      mask-image: linear-gradient(to top, rgba(80,89,108,0) 0%, rgba(255,255,255,1) 30%);
+    }
+
+    .WeaponMain{
+      background: rgba(255,255,255,0.2);
+      padding: 5px;
+      margin-right: 5px;
+      border-radius: 5px;
+    }
+
+    .WeaponSecond{
+      /* background: grey; */
+      padding: 4px 8px;
+      margin-right: 5px;
+      border-radius: 5px;
+    }
+
+    .WeaponImageBlock{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: .5;
+      min-width: 150px;
+    }
+
+    .WeaponOne, .WeaponTwo{
+      display: flex;
+      margin-bottom: 5px;
+    }
+
+    .WeaponName{
+      font-size: 15pt;
+      margin: 0;
+    }
+
+    .WeaponStar{
+      color: #ffcc32;
+      letter-spacing: 0px;
+    }
+
+    .WeaponBase{
+      
+    }
+
+    .WeaponSub{
+      
+    }
+
+    .WeaponRefine{
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .WeaponLevel{
+      background-color: rgba(0,0,0,0.5);
+    }
+
+
+/* STATS */
+
+.Stats{
+  /* background-color: yellow; */
+  height: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  flex-basis: 25%;
+  padding: 10px 20px 10px 10px;
+  flex-direction: column;
+}
+
+
+.StatsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.SubstatsLeft{
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.StatsTitle{
+  margin-left: 5px;
+  width: 100%;
+}
+
+.StatsContainer:nth-child(even) {
+  background: rgb(0,0,0);
+  background: linear-gradient(123deg, rgba(0,0,0,0) -20%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* ARTEFACT */
+
+.Arte{
+  /* background-color: grey; */
+  height: 100%;
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Fleur{order: 5;}
+.Plume{order: 6;}
+.Sablier{order: 2;}
+.Coupe{order: 3;}
+.Casque{order: 4;}
+
+.ArteBlock {
+  display: flex;
+  flex-direction: column;
+  width: 31%;  
+  background-color: rgba(0,0,0,0.5);  
+  border-radius: 8px;
+  color: white;
+  position: relative;
+}
+
+.ArteSet {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  order: 1;
+  width: 100%;
+  min-height: 60px;
+}
+
+.ArteSetInfos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ArteBonus{
+  color: #ffffff;
+}
+
+.ArteName{
+  color: #90ee90;
+}
+
+.ArteSet span {
+  font-size: 8pt;
+  text-align: center;  
+  font-weight: 100;
+  margin: 5px;
+}
+
+.ArteSpec{
+  display: flex;
+  padding: 5px;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  /* background-image: url('/public/image/artefact/Ame\ des\ profondeurs.webp');  */
+  background-size: 150px;
+  background-position: -50px;
+  background-repeat: no-repeat;
+  min-height: 65px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.ArteSubStats {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 12px;
+
+}
+
+.ArteSubStat span {
+  margin-left: 5px;
+  font-weight: 100;
+  width: 100%;
+}
+
+.ArteSubStat{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 13px;
+  margin-bottom: 5px;
+  justify-content: space-between; 
+}
+
+.ArteMainStat{
+  font-size: 1.4rem;
+  z-index: 1;
+  display: flex;
+}
+
+.ArteMainTitle{
+  font-size: .7em;
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 100;
+  z-index: 1;
+}
+
+.ArteStarLevel{
+  display: flex;
+  z-index: 1;
+  align-items: center;
+}
+
+.BgBlack{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,0) -20%, rgba(0,0,0,.7) 100%);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.ArteLevel{
+  font-size: 9pt;
+  background-color: black;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.ArteStar{
+  color: #ffcc32;
+  letter-spacing: -4px;
+}
+
+
+/* APTITUDE */
+
+.Aptitude{
+  z-index: 999;
+}
+.AptitudeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.AptitudeLvl{
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-weight: 100;
+  border-radius: 5px;
+  font-size: 10pt;
+  margin-top: 2px;
+}
+
+.AptitudeContainer img{
+  max-width: 32px;
+}
+
+/* FORM */
+
+.Formulaire{
+  width: var( --Header);
+  transition: .4s;
+  transform: translate(calc( -1 * var(--Header)), 0px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background-color: rgba(0,0,0,.5);
+  padding: 10px;
+  height: 100%;
+}
+
+.IconMenu {
+  position: fixed;
+  left: calc(100% + 10px);
+  font-size: 28pt;
+  color: white;
+  cursor: pointer;
+}
+
+.FormulaireContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.Menutrue .Formulaire{
+  transform: translate(50px, 0px);
+}
+
+
+.ArteFactInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background: rgba(0,0,0,.5); */
+  border-radius: 10px;
+  height: auto;  
+  width: 100%;
+  margin-bottom: 35px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select, input {
+  background: #baafa0;
+  color: #485060;
+  border: none;
+  padding: 4px 6px!important;
+  height: 30px;
+  font-size: 9pt;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  pointer-events: all!important;
+}
+
+.Input {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.Input input, .Input select{  
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  flex: 1;
+  text-align: center;
+  max-width: 50%;
+  margin: 0;
+}
+
+.Input span {
+  flex-basis: 50%;
+  background: #c6c9b9;
+  height: 30px;
+  color: #485060;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;  
+  padding: 4px 0px 4px 12px!important;
+  font-size: 9pt;
+  flex: 1;
+  position: relative;
+}
+
+.StarDeco{
+  color: #b1a595;
+  position: absolute;
+  right: 0;
+  font-size: 22pt;
+  transform: translate(50%,0px);
+  z-index: 99;
+}
+
+.StarDecoB{
+  color: #b1a595;
+  position: absolute;
+  font-size: 22pt;
+  z-index: 99;
+}
+
+/* input:valid{
+  background-color: white;
+  color: green;
+} */
+
+::placeholder {
+  color: #6c6f76;
+}
+
+*:focus {
+  outline: none;
+  background: #c5c5c5;
+}
+
+.SubStatForm{
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.SubStatForm select, .SubStatForm input{
+  flex: 1;
+  max-width: 50%;
+}
+
+.SubStatForm select{
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background: #c6c9b9;
+  padding: 4px 0px 4px 12px!important;
+
+}
+
+.SubStatForm input{
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  text-align: center;
+
+}
+
+.MainStatForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.SetArteForm {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.ArteFormList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ArteFormList h4{
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.ArteFactInputs h3{
+  color: white;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.SetArteForm{
+  width: 100%;
+}
+
+.MainStatArteForm{
+  width: 65px;
+}
+
+.ArteFactInputs h4{
+  color: white;
+  margin: 10px;
+  font-size: 10pt;
+}
+
+.BlockFrom{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.BlockFrom h4{
+  width: 100%;
+  text-align: left;
+  color: white;
+}
+
+.BlockFrom .Wide{
+  width: 80px;
+}
+
+.BlockFrom .ExtraWide{
+  width: 100%;
+  padding: 5px 20px!important;
+}
+
+.SaveButton {
+  background: var(--White);
+  color: var(--Blue);
+  padding: 8px 14px;  
+  font-weight: bold;
+  border-radius: 100px;
+  font-size: 11pt;
+  margin: 5px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.SaveButton:hover{
+  background-color: var(--Blue);
+  color: var(--White);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.ButtonForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  position: fixed;
+  bottom: 1%;
+  right: 2%;
+}
+
+.ConstellZero{
+  display: none;
+}
+
+
+/* Banner Inputs */
+
+.UploadImage {
+  display: none;
+  z-index: 99999999999;
+  background: rgb(0 0 0 / 77%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 11px;
+  font-size: 10pt;
+  border: 2px solid white;
+}
+
+.ChangeOrder{
+  display: none;
+  z-index: 9999999999999;
+  border-radius: 11px;
+  border: 2px solid white;
+  background: rgb(0 0 0 / 77%);
+  /* width: 70px; */
+  text-align: center;
+  color: white!important;
+  height: 40px;
+}
+
+.Hovrable:hover select, .Hovrable:hover input{
+  color: red!important;
+}
+
+.Hovrable:hover .ConstellZero, .Hovrable:hover .UploadImage, .Hovrable:hover .ChangeOrder, .Hovrable:hover .YourMessage{
+  display: block;
+}
+
+.Hovrable:hover .ArtefactSelectSet{
+  background-color: rgb(255 255 255 / 55%);
+  display: block;
+}
+
+.Hovrable:hover .ConstelImg{
+  display: block;
+}
+
+.Hovrable:hover .Hovered{
+  background: rgb(0 0 0 / 35%)!important;
+  border-radius: 3px!important;
+}
+
+
+.Hovrable:hover .Hovered select, .Hovrable:hover .Hovered input, .Hovrable:hover .ChangeOrder{
+  color: white!important;
+}
+
+.Banner select option{
+  color: #485060;
+  font-size: 12pt;
+}
+
+.SelectNiveau {
+  color: white;
+  font-size: 12pt;
+  font-weight: 100;
+  margin: 0!important;
+  background: none;
+  padding: 0!important;
+  text-align: right;
+  height: auto;
+}
+
+.SelectNom{
+  margin: 0;
+  color: white;
+  font-size: 18pt;
+  background: none!important;
+  padding: 0!important;
+  height: auto;
+  font-weight: 800;
+  line-height: 30px;
+  width: 100%;
+}
+
+.SelectBonus {
+  background: none;
+  color: white;
+  font-size: 12pt;
+  margin: 0;
+  padding: 0!important;
+  text-align: left;
+}
+
+.SelectAptitude{
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 20px;
+  line-height: 13px;
+  font-weight: 100;
+  border-radius: 5px;
+  font-size: 10pt;
+  margin-top: 2px;
+  text-align: center;
+  padding: 0!important;
+}
+
+.InputStats {
+  background: none;
+  color: white;
+  font-size: 12pt;
+  text-align: right;
+  padding: 0!important;
+  margin: 0;
+  max-width: 80px;
+}
+
+.WeaponStarSelect{
+  color: #ffcc32;
+  letter-spacing: 0px;
+  background: none;
+  font-size: 12pt;
+  text-align: left;
+  padding: 0!important;
+}
+
+.WeaponModeleSelect{
+  color: white;
+  font-size: 15pt;
+  font-weight: 800;
+  padding: 0!important;
+  background: none;
+  width: 100%;
+}
+
+.WeaponInputAtk{
+  background: rgba(255,255,255,0.2);
+  text-align: center;
+  padding: 0!important;
+  margin-right: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12pt;
+  max-width: 50px;
+} 
+
+.WeaponInputSub{
+  background: none;
+  text-align: center;
+  padding: 0!important;
+  color: white;
+  font-size: 12pt;
+  max-width: 45px;
+}
+
+.WeaponMain {
+  background: rgba(255,255,255,0.2);
+  padding: 0px 5px;
+  margin-right: 0px;
+  border-radius: 5px;
+}
+
+.WeaponInputRefine{
+  padding: 4px 8px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 12pt;
+  text-align: center;
+  color: white;
+}
+
+.WeaponSelectLevel{
+  font-size: 12pt;
+  padding: 0!important;
+  color: white;
+  background: none;
+  margin: 0;
+  line-height: 18px;
+  height: auto;
+  text-align: right;
+}
+
+.ArtefactSelectMain{
+  font-size: .7em;
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 100;
+  z-index: 1;
+  height: 20px;
+  background: none;
+  color: white;
+  padding: 0!important;
+  text-align: right;
+  margin: 0;
+}
+
+.ArtefactInputMain{
+  font-size: 1.4rem;
+    z-index: 1;
+    padding: 0!important;
+    color: white;
+    background: none;
+    text-align: right;
+    width: 100%;
+}
+
+
+.ArtefactSelectStar {
+  color: #ffcc32;
+  letter-spacing: -2px;
+  padding: 0!important;
+  margin: 0;
+  text-align: right;
+  background: none;
+  font-size: 12pt;
+}
+
+.ArtefactSelectLevel{
+  font-size: 9pt;
+  background-color: black;
+  padding: 2px 5px!important;
+  border-radius: 5px;
+  margin-left: 5px;
+  color: white;
+  height: auto;
+  text-align: center;
+}
+
+.ArtefactSelectSub{
+  background: none;
+  padding: 0!important;
+  color: white;
+  font-size: 13px;
+  height: auto;
+  margin: 0;
+}
+
+.ArtefactInputSub {
+  background: none;
+  color: white;
+  font-size: 13px;
+  padding: 0!important;
+  margin: 0;
+  text-align: right;
+  width: 35px;
+  height: auto;
+}
+
+.ArteSubStatLeft{
+  display: flex;
+  align-items: center;
+}
+
+.ArtefactSelectSub{
+  margin-left: 5px;
+}
+
+.ArtefactSelectSet {
+  z-index: 9;
+  color: white;
+  background: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-size: 8pt;
+  top: -18px;
+  height: 20px;
+  text-align: center;
+  display: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+
+.InsideForm{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%,0);
+  display: flex;
+  z-index: 999999999999;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 10px;
+}
+
+.Banner:not(.Hovrable) .YourMessage:placeholder-shown{
+  display: none;
+}
+
+.YourMessage:not(:placeholder-shown) {
+  display: block!important;
+}
+
+.YourMessage{
+  position: absolute;
+  display: none;
+  left: 50%;
+  transform: translate(-50%,0);
+  background: rgba(0,0,0,.4);
+  padding: 5px 5px;
+  color: white!important;
+  border-radius: .4em;
+  font-size: .8em;
+  text-align: center;
+  z-index: 9999999999999;
+}
+
+
